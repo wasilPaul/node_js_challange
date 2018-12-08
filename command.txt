@@ -1,0 +1,5 @@
+checking: node --v8-options | grep "in progress"
+using: node --harmony_...
+
+command: node -p "process.env" | less
+using: if (process.version.v8 < '4') { ... }
