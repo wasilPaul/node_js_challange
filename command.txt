@@ -3,3 +3,6 @@ using: node --harmony_...
 
 command: node -p "process.env" | less
 using: if (process.version.v8 < '4') { ... }
+
+show global packages: npm ls -g 
+npm ll -g
