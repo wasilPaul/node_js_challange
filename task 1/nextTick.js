@@ -14,6 +14,7 @@ function fileSize(filenName, callback) {
     callback(null, stats.size);
   });
 }
+
 fileSize(__filename, (err, size) => {
   if (err) throw err;
   console.log(`Size in KB: ${size / 1024}`);
