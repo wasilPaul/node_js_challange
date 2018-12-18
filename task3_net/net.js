@@ -9,11 +9,14 @@ server.on("connection", socket => {
   console.log("Client connected");
   socket.write("Welcome new client!\n");
   socket.on("data", data => {
-    socket.write(`${socket.id}`);
-    socket.write(`data is: ${data}`);
+    Object.entries(sockets).forEach(([, cs]) => {
+      cs.write(`User nr ${socket.id}: `);
+      cs.write(`${data}`);
+    });
   });
   socket.setEncoding("utf8");
   socket.on("end", () => {
+    delete sockets[socket.id];
     console.log("Client disconected");
   });
 });
