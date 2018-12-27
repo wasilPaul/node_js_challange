@@ -21,7 +21,7 @@ server.on("connection", socket => {
     }
     Object.entries(sockets).forEach(([key, cs]) => {
       if (socket.id == key) return;
-      cs.write(`${timestamp()} - ${socket.name} : `);
+      cs.write(`${timestamp()} / ${socket.name} : `);
       cs.write(`${data}`);
     });
   });
