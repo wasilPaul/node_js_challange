@@ -29,3 +29,4 @@ server.on("request", (req, res) => {
 server.listen(7000);
 
 //command: node http.STATUS_CODES --> all available status code
+//url.parse('https://www.google.com'), querystring.stringify({...})
