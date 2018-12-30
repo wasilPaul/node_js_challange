@@ -6,7 +6,6 @@ if (fs.existsSync(dirname)) {
   console.log("Dir already exist");
   return;
 }
-
 fs.mkdirSync(dirname);
 const msOneDay = 24 * 60 * 60 * 1000;
 

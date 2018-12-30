@@ -4,6 +4,8 @@ const path = require("path");
 const dirname = path.join(__dirname, "files");
 const currentFiles = fs.readdirSync(dirname);
 
+console.log(currentFiles);
+
 const logWithTime = message => {
   console.log(`${new Date().toUTCString()}: ${message}`);
 };
