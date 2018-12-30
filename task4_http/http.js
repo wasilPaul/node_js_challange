@@ -1,7 +1,11 @@
 //server: http.Server
 const server = require("http").createServer();
 
+const util = require("util");
+const debuglog = util.debuglog("web");
+
 server.on("request", (req, res) => {
+  debuglog("HTTP Request: %s", req.url);
   //req: http.IncomingMessage
   //res: http.ServerResponse
   res.writeHead(200, { "content-type": "text/plain" });

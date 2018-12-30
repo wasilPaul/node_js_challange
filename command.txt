@@ -6,3 +6,5 @@ using: if (process.version.v8 < '4') { ... }
 
 show global packages: npm ls -g 
 npm ll -g
+
+node --inspect --debug --debug-brk index.js
