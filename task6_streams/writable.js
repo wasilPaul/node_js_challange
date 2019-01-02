@@ -8,3 +8,6 @@ const outStram = new Writable({
 });
 
 process.stdin.pipe(outStram);
+
+// the same feature:
+//process.stdin.pipe(process.stdout);
