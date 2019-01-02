@@ -13,10 +13,8 @@ const progress = new Transform({
 });
 
 fs.createReadStream(file)
+  .pipe(crypto.createDecipher("aes192", "a_secret"))
   .pipe(zlib.createGzip())
-  .pipe(crypto.createCipher("aes192", "a_secret"))
-  //.on("data", () => process.stdout.write("."))
-  //or:
   .pipe(progress)
-  .pipe(fs.createWriteStream(file + ".zz"))
+  .pipe(fs.createWriteStream(file.slice(0, -3)))
   .on("finish", () => console.log("Done"));
