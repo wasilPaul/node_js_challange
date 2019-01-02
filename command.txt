@@ -8,3 +8,9 @@ show global packages: npm ls -g
 npm ll -g
 
 node --inspect --debug --debug-brk index.js
+
+Types of streams:
+-Readable => fs.createReadStream
+-Writable => fs.createWriteStream
+-Duplex => net.Socket
+-Transform => zlib.createGzip
