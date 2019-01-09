@@ -2,7 +2,6 @@ const fs = require("fs");
 const crypto = require("crypto");
 const zlib = require("zlib");
 const file = process.argv[2];
-
 const { Transform } = require("stream");
 
 const progress = new Transform({
