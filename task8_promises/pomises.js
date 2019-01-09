@@ -13,8 +13,18 @@ fs.readFile(join(__dirname, "/../task3_net/chat.js"), (err, data1) => {
   });
 });
 
-//new
+const promise = new Promise((resolve, reject) => {
+  resolve("good");
+  //reject('bad')
+})
+  .then(value => {
+    console.log(value);
+  })
+  .catch(err => {
+    console.error(err);
+  });
 
+//new
 const read = util.promisify(fs.readFile);
 
 Promise.all([
